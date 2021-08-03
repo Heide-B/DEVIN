@@ -1,0 +1,8 @@
+streamlit==0.85.1
+pandas==1.2.3
+numpy==1.20.2
+base58==2.1.0
+regex==2021.4.4
+ipython==7.22.0
+geopandas==0.6.1
+matplotlib== 3.3.4
