@@ -26,7 +26,7 @@ st.markdown(
     unsafe_allow_html=True)
 
 def write_recoms(region, ttype):
-    path = 'Streamlit/recomms/'
+    path = './recomms/'
     region_s = regions[regions['AREA']==region]['Recom_Clusters'].iloc[0]
     
     for i in os.listdir(path):
