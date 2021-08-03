@@ -9,11 +9,11 @@ import os
 st.set_page_config(layout="wide")
 
 
-virus = pd.read_csv("https://raw.githubusercontent.com/Heide-B/RNA-Virus-Clustering/main/Streamlit/Virus_Data.csv")
-regions = pd.read_csv("https://raw.githubusercontent.com/Heide-B/RNA-Virus-Clustering/main/Streamlit/Region_Data.csv")
+virus = pd.read_csv("Virus_Data.csv")
+regions = pd.read_csv("Region_Data.csv")
 regions = gpd.GeoDataFrame(regions)
 
-main_bg = "Streamlit/bg1.png"
+main_bg = "bg1.png"
 main_bg_ext = "png"
 st.markdown(
     f"""
@@ -37,14 +37,14 @@ def write_recoms(region, ttype):
             st.write(file)
 
 def images(reg_clu):
-    path = 'Streamlit/'    
+    path = './'    
     for i in os.listdir(path):
         if i.startswith(str(reg_clu)) and i.endswith('png'):
             files = os.path.join(path,i)
             col1.image(files)
             
 def icons(ic):
-    path = 'Streamlit/Risk/'
+    path = './Risk/'
     icc = regions[regions['AREA']==ic]['vulneb_labels'].iloc[0]
     for i in os.listdir(path):
         if i.startswith(str(icc)) and i.endswith('png'):
@@ -52,7 +52,7 @@ def icons(ic):
             col2.image(files)
 
 
-st.image('Streamlit/DEVIN.png')
+st.image('DEVIN.png')
 st.header("Focused Preparation Leads to Effective Preventions")
 st.write('The next pandemic is not a question of if, but when. It is our responsibility to equip ourselves with the right information to better our prevention and mitigation efforts. DEVIN is a simple dashboard that aims to provide a guide on how each Philippine region can prepare for this pandemic.')
 
@@ -86,7 +86,7 @@ if selected_region != '':
     regim = regions[regions['AREA']==selected_region]['Recom_Clusters'].iloc[0]
     images(regim)
 else:
-    col1.image('Streamlit/Original.png')
+    col1.image('Original.png')
 
 if selected_region != '':
     st.header('DEVIN Recommended Interventions for ' + selected_region)
