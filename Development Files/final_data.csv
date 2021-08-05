@@ -1,0 +1,22 @@
+Species,GC%,adhesion,encapsidation,assembly,polyprotein,virulence_score
+Orthohepevirus A,55.5,0.0,70.0,0.0,27.0,1.525
+Hepacivirus C,56.9,0.0,0.0,0.0,93.0,1.499
+Zika virus,51.3,0.0,0.0,0.0,95.0,1.463
+Japanese encephalitis virus,51.4,0.0,0.0,0.0,93.0,1.444
+Dengue virus,46.7,0.0,0.0,0.0,94.0,1.407
+Foot-and-mouth disease virus,53.75,0.0,0.0,0.0,85.0,1.3875
+Enterovirus B,47.9,0.0,0.0,0.0,88.0,1.359
+Enterovirus A,47.2,0.0,0.0,0.0,88.0,1.352
+Enterovirus C,45.7,0.0,0.0,0.0,89.0,1.347
+Rhinovirus C,42.8,0.0,0.0,0.0,90.0,1.328
+Enterovirus D,42.8,0.0,0.0,0.0,89.0,1.318
+Rhinovirus A,38.6,0.0,0.0,0.0,90.0,1.286
+Armigeres iflavirus,39.4,0.0,0.0,0.0,88.0,1.274
+Chikungunya virus,50.0,0.0,0.0,0.0,31.0,0.81
+Redspotted grouper nervous necrosis virus,52.62,0.0,22.0,0.0,0.0,0.7462
+Porcine epidemic diarrhea virus,41.8,0.0,16.0,4.0,0.0,0.618
+Porcine reproductive and respiratory syndrome virus,51.52,0.0,6.0,3.0,0.0,0.6052
+Middle East respiratory syndrome-related coronavirus,41.2,0.0,15.0,4.0,0.0,0.6020000000000001
+Betaarterivirus suid 2,52.8,0.0,4.0,2.0,0.0,0.5880000000000001
+Severe acute respiratory syndrome-related coronavirus,40.8,4.0,14.0,0.0,0.0,0.588
+Human coronavirus HKU1,32.1,4.0,15.0,0.0,0.0,0.511

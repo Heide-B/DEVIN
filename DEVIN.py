@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import geopandas as gpd
 import os
 
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
 
 
 virus = pd.read_csv("Virus_Data.csv")
@@ -57,7 +57,6 @@ st.header("Focused Preparation Leads to Effective Preventions")
 st.write('The next pandemic is not a question of if, but when. It is our responsibility to equip ourselves with the right information to better our prevention and mitigation efforts. DEVIN is a simple dashboard that aims to provide a guide on how each Philippine region can prepare for this pandemic.')
 
 my_expander = st.beta_expander('A simple guide to DEVIN')
-my_expander.write('Hello there!')
 prez = '[Check the presentation here!](https://docs.google.com/presentation/d/e/2PACX-1vS5YdweotyAsrIFa2YeWF-gQsLLgKe4vLk1tysDVDP56qoMTH2qmmmJ_HekSMtrO9nd7SeLw0YcU3ww/pub?start=false&loop=false&delayms=5000)'
 x = my_expander.markdown(prez, unsafe_allow_html=True)
 
@@ -75,6 +74,7 @@ selected_region = col2.selectbox('Select a Region',reg_choices)
 if selected_region != '':
     icons(selected_region)
     col2.write('Region Vulnerability: ' + str(regions[regions['AREA']==selected_region]['vulneb_labels'].iloc[0]))
+    col2.write('Region Category: ' + str(regions[regions['AREA']==selected_region]['Recom_Clusters'].iloc[0]))
     col2.write('Doctors (per 10k pop): ' + str(regions[regions['AREA']==selected_region]['Doctors'].iloc[0]))
     col2.write('Nurses (per 10k pop): ' + str(regions[regions['AREA']==selected_region]['Nurses'].iloc[0]))
     col2.write('Beds (per 10k pop): ' + str(regions[regions['AREA']==selected_region]['Beds'].iloc[0]))

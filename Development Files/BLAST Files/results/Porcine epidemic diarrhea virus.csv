@@ -1,0 +1,9 @@
+Description,Total Score,Query Cover,E value,Per. ident,Acc. Len
+envelope,7668,14%,0,100,4152
+membrane,2449,4%,0,100,1326
+nucleocapsid,1258,2%,0,100,681
+spike,427,0%,3.00E-121,100,231
+,,,,,
+,,,,,
+,,,,,
+"		",,,,,

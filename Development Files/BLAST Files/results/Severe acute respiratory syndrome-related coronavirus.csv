@@ -1,0 +1,9 @@
+Description,Total Score,Query Cover,E value,Per. ident,Acc. Len
+envelope,6959,12%,0,100,3768
+glycoprotein,2344,4%,0,100,1269
+nucleocapsid,1230,2%,0,100,666
+spike,427,0%,3.00E-121,100,231
+,,,,,
+,,,,,
+,,,,,
+"		",,,,,

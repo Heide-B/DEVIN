@@ -1,0 +1,22 @@
+Species,Cluster_Labels,Host
+Orthohepevirus A,0,Sus scrofa
+Hepacivirus C,0,Homo sapiens
+Zika virus,0,Homo sapiens
+Japanese encephalitis virus,0,"Sus scrofa,Sus sp.,Sus scrofa domesticus"
+Dengue virus,0,"Homo sapiens,Aedes aegypti"
+Foot-and-mouth disease virus,2,"Sus scrofa,Bubalus bubalis,Suidae"
+Enterovirus B,2,Homo sapiens
+Enterovirus A,2,Homo sapiens
+Enterovirus C,2,Homo sapiens
+Rhinovirus C,2,Homo sapiens
+Enterovirus D,2,Homo sapiens
+Rhinovirus A,2,Homo sapiens
+Armigeres iflavirus,2,Armigeres
+Chikungunya virus,3,Homo sapiens
+Redspotted grouper nervous necrosis virus,3,Trachinotus blochii
+Porcine epidemic diarrhea virus,1,"Sus scrofa,Sus scrofa domesticus"
+Porcine reproductive and respiratory syndrome virus,1,Sus scrofa
+Middle East respiratory syndrome-related coronavirus,1,Homo sapiens
+Betaarterivirus suid 2,1,Sus scrofa
+Severe acute respiratory syndrome-related coronavirus,1,Homo sapiens
+Human coronavirus HKU1,1,Homo sapiens
