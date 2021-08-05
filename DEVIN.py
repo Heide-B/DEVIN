@@ -51,7 +51,7 @@ def icons(ic):
             col2.image(files)
 
 def vcs(reg):
-    vc = regions[regions['AREA']==reg].iloc[:,8:12].idxmax(axis=1)[0]
+    vc = regions[regions['AREA']==reg].iloc[:,9:13].idxmax(axis=1)[0]
     foo = virus[virus['Virus Clusters']==vc]['Species']
     for j in foo:
         st.write(j)
@@ -92,9 +92,10 @@ if selected_region != '':
 else:
     col1.image('Original.png')
 
+st.header('DEVIN Recommended Interventions for ' + selected_region)
+
 col3, col4, col5 = st.beta_columns((1, 1, 1))
-if selected_region != '':
-    st.header('DEVIN Recommended Interventions for ' + selected_region)
+if selected_region != '':    
     col3.subheader('For the Individual')
     col3.write(write_recoms(selected_region, 'indiv'))
     col4.subheader('For Communities')
