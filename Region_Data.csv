@@ -1,18 +1,18 @@
-,Unnamed: 0,AREA,Doctors,Nurses,Beds,Pop Density,Mortality,Recom_Clusters,vulneb_labels
-0,0,NCR ,10.0,12.0,14.0,89.0,5.7,Over Capacity,Low Viral Risk
-1,1,CAR ,6.0,15.0,7.0,82.0,4.3,Over Capacity,Low Viral Risk
-2,2,REGION I ,4.0,11.0,5.0,19137.0,6.7,Manageable,Non Viral Risk
-3,3,REGION II ,4.0,12.0,6.0,366.0,5.7,Unrelated,Non Viral Risk
-4,4,REGION III ,4.0,8.0,5.0,108.0,5.6,Unrelated,High Viral Risk
-5,5,REGION IVA ,3.0,7.0,6.0,463.0,5.5,Unrelated,Non Viral Risk
-6,6,REGION IVB ,2.0,6.0,1.0,761.0,4.8,Unrelated,Non Viral Risk
-7,7,REGION V ,3.0,8.0,4.0,93.0,5.9,Susceptible,Critical Viral Risk
-8,8,REGION VI ,3.0,7.0,6.0,202.0,6.6,Susceptible,Probable Viral Risk
-9,9,REGION VII ,3.0,10.0,7.0,299.0,6.1,Unrelated,Non Viral Risk
-10,10,REGION VIII ,3.0,7.0,3.0,177.0,6.0,Unrelated,High Viral Risk
-11,11,REGION IX ,3.0,9.0,4.0,202.0,4.3,Unrelated,Medium Viral Risk
-12,12,REGION X ,3.0,9.0,7.0,177.0,5.0,Unrelated,Medium Viral Risk
-13,13,REGION XI ,3.0,7.0,9.0,210.0,5.5,Unrelated,Low Viral Risk
-14,14,REGION XII ,3.0,8.0,5.0,219.0,4.5,Unrelated,Low Viral Risk
-15,15,REGION XIII ,2.0,8.0,4.0,214.0,4.9,Unrelated,Low Viral Risk
-16,16,ARMM ,1.0,4.0,3.0,115.0,0.4,Marginal Capacity,Non Viral Risk
+,AREA,Doctors,Nurses,Beds,Pop Density,Mortality,Recom_Clusters,vulneb_labels,Virulent_Counts,Infectious_Counts,Replicative_Counts,Robust_Counts
+0,NCR ,10.0,12.0,14.0,89.0,5.7,Over Capacity,Low Viral Risk,1.0,1.0,10.0,1.0
+1,CAR ,6.0,15.0,7.0,82.0,4.3,Over Capacity,Low Viral Risk,1.0,1.0,7.0,1.0
+2,REGION I ,4.0,11.0,5.0,19137.0,6.7,Manageable,Non Viral Risk,1.0,1.0,6.0,1.0
+3,REGION II ,4.0,12.0,6.0,366.0,5.7,Unrelated,Non Viral Risk,1.0,1.0,7.0,1.0
+4,REGION III ,4.0,8.0,5.0,108.0,5.6,Unrelated,High Viral Risk,1.0,1.0,6.0,1.0
+5,REGION IVA ,3.0,7.0,6.0,463.0,5.5,Unrelated,Non Viral Risk,1.0,1.0,6.0,1.0
+6,REGION IVB ,2.0,6.0,1.0,761.0,4.8,Unrelated,Non Viral Risk,2.0,1.0,6.0,1.0
+7,REGION V ,3.0,8.0,4.0,93.0,5.9,Susceptible,Critical Viral Risk,14.0,1.0,5.0,1.0
+8,REGION VI ,3.0,7.0,6.0,202.0,6.6,Susceptible,Probable Viral Risk,14.0,1.0,5.0,1.0
+9,REGION VII ,3.0,10.0,7.0,299.0,6.1,Unrelated,Non Viral Risk,2.0,1.0,8.0,1.0
+10,REGION VIII ,3.0,7.0,3.0,177.0,6.0,Unrelated,High Viral Risk,3.0,1.0,6.0,1.0
+11,REGION IX ,3.0,9.0,4.0,202.0,4.3,Unrelated,Medium Viral Risk,4.0,1.0,6.0,1.0
+12,REGION X ,3.0,9.0,7.0,177.0,5.0,Unrelated,Medium Viral Risk,4.0,1.0,5.0,1.0
+13,REGION XI ,3.0,7.0,9.0,210.0,5.5,Unrelated,Low Viral Risk,2.0,1.0,5.0,1.0
+14,REGION XII ,3.0,8.0,5.0,219.0,4.5,Unrelated,Low Viral Risk,1.0,1.0,8.0,1.0
+15,REGION XIII ,2.0,8.0,4.0,214.0,4.9,Unrelated,Low Viral Risk,2.0,1.0,6.0,1.0
+16,ARMM ,1.0,4.0,3.0,115.0,0.4,Marginal Capacity,Non Viral Risk,4.0,1.0,5.0,1.0

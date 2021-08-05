@@ -11,7 +11,6 @@ import os
 
 virus = pd.read_csv("Virus_Data.csv")
 regions = pd.read_csv("Region_Data.csv")
-regions = gpd.GeoDataFrame(regions)
 
 main_bg = "bg1.png"
 main_bg_ext = "png"
@@ -51,6 +50,11 @@ def icons(ic):
             files = os.path.join(path,i)
             col2.image(files)
 
+def vcs(reg):
+    vc = regions[regions['AREA']==reg].iloc[:,8:12].idxmax(axis=1)[0]
+    foo = virus[virus['Virus Clusters']==vc]['Species']
+    for j in foo:
+        st.write(j)
 
 st.image('DEVIN.png')
 st.header("Focused Preparation Leads to Effective Preventions")
@@ -88,16 +92,22 @@ if selected_region != '':
 else:
     col1.image('Original.png')
 
+col3, col4, col5 = st.beta_columns((1, 1, 1))
 if selected_region != '':
     st.header('DEVIN Recommended Interventions for ' + selected_region)
-    st.subheader('For the Individual')
-    write_recoms(selected_region, 'indiv')
-    st.subheader('For Communities')
-    write_recoms(selected_region, 'work')
-    st.subheader('For Healthcare Systems')
-    write_recoms(selected_region, 'health')
+    col3.subheader('For the Individual')
+    col3.write(write_recoms(selected_region, 'indiv'))
+    col4.subheader('For Communities')
+    col4.write(write_recoms(selected_region, 'work'))
+    col5.subheader('For Healthcare Systems')
+    col5.write(write_recoms(selected_region, 'health'))
 else:
     st.write('')
+
+
+if selected_region != '':
+    st.header('Viruses Posing Risk to ' + selected_region)
+    vcs(selected_region)
 
 st.subheader('')
 st.subheader('Thank you for visiting DEVIN!')
