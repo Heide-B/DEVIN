@@ -33,7 +33,7 @@ def write_recoms(region, ttype):
         if i.startswith(str(region_s)) and x.endswith(ttype):
             text = os.path.join(path,i)
             file = open(text,'r').read()  
-            st.write(file)
+            return file
 
 def images(reg_clu):
     path = './'    
@@ -51,7 +51,7 @@ def icons(ic):
             col2.image(files)
 
 def vcs(reg):
-    vc = regions[regions['AREA']==reg].iloc[:,9:13].idxmax(axis=1)[0]
+    vc = regions[regions['AREA']==reg].iloc[:,9:13].idxmax(axis=1).iloc[0]
     foo = virus[virus['Virus Clusters']==vc]['Species']
     for j in foo:
         st.write(j)
@@ -97,11 +97,14 @@ st.header('DEVIN Recommended Interventions for ' + selected_region)
 col3, col4, col5 = st.beta_columns((1, 1, 1))
 if selected_region != '':    
     col3.subheader('For the Individual')
-    col3.write(write_recoms(selected_region, 'indiv'))
+    ndv = write_recoms(selected_region, 'indiv')
+    col3.write(ndv)
     col4.subheader('For Communities')
-    col4.write(write_recoms(selected_region, 'work'))
+    cmm = write_recoms(selected_region, 'work')
+    col4.write(cmm)
     col5.subheader('For Healthcare Systems')
-    col5.write(write_recoms(selected_region, 'health'))
+    hlth = write_recoms(selected_region, 'health')
+    col5.write(hlth)
 else:
     st.write('')
 
