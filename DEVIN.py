@@ -77,12 +77,17 @@ for index, value in enumerate(regions['AREA']):
 selected_region = col2.selectbox('Select a Region',reg_choices)
 if selected_region != '':
     icons(selected_region)
-    col2.write('Region Vulnerability: ' + str(regions[regions['AREA']==selected_region]['vulneb_labels'].iloc[0]))
+    col2.write('Region Vulnerability:')
+    col2.write(str(regions[regions['AREA']==selected_region]['vulneb_labels'].iloc[0]))
     col2.write('Region Category: ' + str(regions[regions['AREA']==selected_region]['Recom_Clusters'].iloc[0]))
     col2.write('Doctors (per 10k pop): ' + str(regions[regions['AREA']==selected_region]['Doctors'].iloc[0]))
     col2.write('Nurses (per 10k pop): ' + str(regions[regions['AREA']==selected_region]['Nurses'].iloc[0]))
     col2.write('Beds (per 10k pop): ' + str(regions[regions['AREA']==selected_region]['Beds'].iloc[0]))
     col2.write('Population Density: ' + str(regions[regions['AREA']==selected_region]['Pop Density'].iloc[0]))
+    col2.subheader(' ')
+    col2.subheader('Viruses Posing Risk to ' + selected_region)
+    vvv = vcs(selected_region)
+    col2.write(vvv)
 else:
     col2.write('Select a region to view its data and recommendations!')
 
@@ -94,24 +99,17 @@ else:
 
 st.header('DEVIN Recommended Interventions for ' + selected_region)
 
-col3, col4, col5 = st.beta_columns((1, 1, 1))
+
 if selected_region != '':    
-    col3.subheader('For the Individual')
-    ndv = write_recoms(selected_region, 'indiv')
-    col3.write(ndv)
-    col4.subheader('For Communities')
-    cmm = write_recoms(selected_region, 'work')
-    col4.write(cmm)
-    col5.subheader('For Healthcare Systems')
-    hlth = write_recoms(selected_region, 'health')
-    col5.write(hlth)
+    st.subheader('For the Individual')
+    write_recoms(selected_region, 'indiv')
+    st.subheader('For Communities')
+    write_recoms(selected_region, 'work')
+    st.subheader('For Healthcare Systems')
+    write_recoms(selected_region, 'health')
 else:
     st.write('')
 
-
-if selected_region != '':
-    st.header('Viruses Posing Risk to ' + selected_region)
-    vcs(selected_region)
 
 st.subheader('')
 st.subheader('Thank you for visiting DEVIN!')
