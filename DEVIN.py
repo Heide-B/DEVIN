@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import geopandas as gpd
 import os
 
-#st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 
 
 virus = pd.read_csv("Virus_Data.csv")
