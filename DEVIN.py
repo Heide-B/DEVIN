@@ -33,7 +33,7 @@ def write_recoms(region, ttype):
         if i.startswith(str(region_s)) and x.endswith(ttype):
             text = os.path.join(path,i)
             file = open(text,'r').read()  
-            return file
+            st.write(file)
 
 def images(reg_clu):
     path = './'    
