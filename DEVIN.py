@@ -54,7 +54,7 @@ def vcs(reg):
     vc = regions[regions['AREA']==reg].iloc[:,9:13].idxmax(axis=1).iloc[0]
     foo = virus[virus['Virus Clusters']==vc]['Species']
     for j in foo:
-        st.write(j)
+        col2.write(j)
 
 st.image('DEVIN.png')
 st.header("Focused Preparation Leads to Effective Preventions")
@@ -77,8 +77,7 @@ for index, value in enumerate(regions['AREA']):
 selected_region = col2.selectbox('Select a Region',reg_choices)
 if selected_region != '':
     icons(selected_region)
-    col2.write('Region Vulnerability:')
-    col2.write(str(regions[regions['AREA']==selected_region]['vulneb_labels'].iloc[0]))
+    col2.write('Region Vulnerability: ' + str(regions[regions['AREA']==selected_region]['vulneb_labels'].iloc[0]))
     col2.write('Region Category: ' + str(regions[regions['AREA']==selected_region]['Recom_Clusters'].iloc[0]))
     col2.write('Doctors (per 10k pop): ' + str(regions[regions['AREA']==selected_region]['Doctors'].iloc[0]))
     col2.write('Nurses (per 10k pop): ' + str(regions[regions['AREA']==selected_region]['Nurses'].iloc[0]))
@@ -86,8 +85,7 @@ if selected_region != '':
     col2.write('Population Density: ' + str(regions[regions['AREA']==selected_region]['Pop Density'].iloc[0]))
     col2.subheader(' ')
     col2.subheader('Viruses Posing Risk to ' + selected_region)
-    vvv = vcs(selected_region)
-    col2.write(vvv)
+    vcs(selected_region)
 else:
     col2.write('Select a region to view its data and recommendations!')
 
