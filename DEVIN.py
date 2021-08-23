@@ -12,7 +12,7 @@ st.set_page_config(layout="wide")
 virus = pd.read_csv("Virus_Data.csv")
 regions = pd.read_csv("Region_Data.csv")
 
-main_bg = "bg1.png"
+main_bg = "DEVIN.png"
 main_bg_ext = "png"
 st.markdown(
     f"""
@@ -70,7 +70,7 @@ col1, col2 = st.beta_columns((2, 1))
 col1.header("Map of Regions")
 
 col2.header("User Input")
-reg_choices = ['']
+reg_choices = [' ']
 
 for index, value in enumerate(regions['AREA']):
     reg_choices.append(value)
@@ -89,7 +89,7 @@ if selected_region != '':
 else:
     col2.write('Select a region to view its data and recommendations!')
 
-if selected_region != '':
+if selected_region != ' ':
     regim = regions[regions['AREA']==selected_region]['Recom_Clusters'].iloc[0]
     images(regim)
 else:
