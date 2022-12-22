@@ -99,7 +99,7 @@ else:
 st.header('DEVIN Recommended Interventions for ' + selected_region)
 
 
-if selected_region != '':    
+if selected_region != ' ':    
     st.subheader('For the Individual')
     write_recoms(selected_region, 'indiv')
     st.subheader('For Communities')
