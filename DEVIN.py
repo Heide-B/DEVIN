@@ -44,7 +44,6 @@ def images(reg_clu):
             
 def icons(ic):
     path = './Risk/'
-    st.dataframe(regions[regions['AREA']==ic])
     icc = regions[regions['AREA']==ic]['vulneb_labels'].values
     for i in os.listdir(path):
         if i.startswith(str(icc)) and i.endswith('png'):
@@ -76,7 +75,7 @@ reg_choices = [' ']
 for index, value in enumerate(regions['AREA']):
     reg_choices.append(value)
 selected_region = col2.selectbox('Select a Region',reg_choices)
-if selected_region != '':
+if selected_region != ' ':
     icons(selected_region)
     col2.write('Region Vulnerability: ' + str(regions[regions['AREA']==selected_region]['vulneb_labels'].iloc[0]))
     col2.write('Region Category: ' + str(regions[regions['AREA']==selected_region]['Recom_Clusters'].iloc[0]))
