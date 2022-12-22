@@ -44,7 +44,8 @@ def images(reg_clu):
             
 def icons(ic):
     path = './Risk/'
-    icc = regions[regions['AREA']==ic].iloc[0,8].values
+    st.dataframe(regions[regions['AREA']==ic])
+    icc = regions[regions['AREA']==ic]['vulneb_labels'].values
     for i in os.listdir(path):
         if i.startswith(str(icc)) and i.endswith('png'):
             files = os.path.join(path,i)
