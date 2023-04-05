@@ -12,7 +12,7 @@ st.set_page_config(layout="wide")
 virus = pd.read_csv("Virus_Data.csv")
 regions = pd.read_csv("Region_Data.csv")
 
-main_bg = "DEVIN.png"
+main_bg = "bg1.png"
 main_bg_ext = "png"
 st.markdown(
     f"""
